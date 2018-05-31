@@ -31,13 +31,13 @@ public static void main(String[] args) {
 			System.out.println("distance " + distance);
 			
 			
-			if (distance < 0.1) {//快撞到了
+			if (distance < 0.2) {//快撞到了
 				//pilot.backward();//後退20公分
 				Motor.A.backward();
 				Motor.C.backward();
 				
-			} else if(distance<0.5){
-				Motor.C.rotate(360);
+			} else if(distance<0.3){
+				Motor.C.rotate(-300);
 				
 			}else{
 				//pilot.forward();
