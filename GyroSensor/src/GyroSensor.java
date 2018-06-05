@@ -22,10 +22,24 @@ public class GyroSensor {
            
             
             System.out.println("Angle " +sample[0]);
+            int rotate=(int)sample[0];
             
-			if(sample[0] > 5.0){
-				Motor.A.rotate(100);	
+            if(sample[0] >=30.0){
+            	Motor.C.rotate(50);
+            	
+            }
+            else if(sample[0] <=-30.0)
+            {
+            	Motor.A.rotate(50);
+            	
+            }
+            else if(sample[0] >=5.0){
+				Motor.C.rotate(18);	
 				//break;
+			}
+			else if(sample[0] <=-5.0)
+			{
+				Motor.A.rotate(18);
 			}
 
 			/*iterationCounter++;
