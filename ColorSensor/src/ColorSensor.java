@@ -21,16 +21,30 @@ public class ColorSensor {
 			color.fetchSample(colorSample, 0);
 			System.out.println("Color " + colorSample[0]);
 			
+			if(colorSample[0] > 0.3){
+				Motor.A.rotate(25);
+			}
+			else{
+				Motor.C.rotate(25);
+			}
+			
 			//Motor.A.forward();
 			//Motor.C.forward();
-			if (colorSample[0] > 0.1) {//¥Õ
-				Motor.A.rotate(15);
+			/*
+			if(colorSample[0] > 0.3){
+				Motor.A.rotate(30);
+			}
+			else if(colorSample[0] > 0.2){
+				Motor.A.rotate(20);
+			}
+			
+			else if (colorSample[0] > 0.1) {//¥Õ
+				Motor.A.rotate(10);
 				
 			}else{
-				
-				Motor.C.rotate(15);
-				
-			}
+				Motor.C.rotate(40);
+				Motor.A.rotate(20);
+			}*/
 
 		} 
 
